@@ -1,4 +1,4 @@
---DROP TABLE IF EXISTS todos;
+-- DROP TABLE IF EXISTS todos;
 DROP TABLE todos;
 
 CREATE TABLE todos(
@@ -9,8 +9,8 @@ CREATE TABLE todos(
  end_date VARCHAR2(50) 	
 );
 
-DROP Sequence todo_seq;
+DROP SEQUENCE todo_seq  ;
 CREATE SEQUENCE todo_seq
-START WITH 1
 INCREMENT BY 1
-NOMAXVALUE;
+NOMAXVALUE
+START WITH 1;

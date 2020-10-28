@@ -1,13 +1,22 @@
 server:
   port: 9001
 
-spring:  h2:    console:      enabled: true
-  datasource:    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@DESKTOP-IEDEJ5T:1521/XE
-    username: hr
-    password: hr
+spring:#  h2:#    console:#      enabled: true
+#  datasource:#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@DESKTOP-IEDEJ5T:1521/XE
+#    username: hr
+#    password: hr
+#  
+#  jpa:
+#    database-platform: org.hibernate.dialect.OracleDialect
+#    show-sql: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://210.107.78.153:9010/todos?useUnicode=yes&characterEncoding=UTF-8
+    username: test
+    password: test
   
   jpa:
-    database-platform: org.hibernate.dialect.OracleDialect
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
   

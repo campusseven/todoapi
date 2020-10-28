@@ -1,0 +1,14 @@
+node(‘agent01’){
+stage(‘Pull’) { 
+   git  ‘git 저장소’	
+}
+stage('Build') { 
+	docker image build securejava/todos:latest .
+}
+stage('Push') { 
+	docker push securejava/todos
+}
+stage(‘Deploy’) {
+    docker run -it --name todo -p 9001:9001 securejava/todo -d
+ 
+}
